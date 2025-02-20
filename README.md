@@ -5,6 +5,26 @@ This project sought to create an anki deck of minimal pairs for vowels. To
 download the anki deck, please click this link: [French Minimal Pairs for
 Vowels][6].
 
+Purpose of this fork
+----------
+
+The main issues that I identified with the original project was that there were simply far too many notes, with lots of duplicates for sound pairs that I didn't need to train. Deleting these every time I came across them was taking more time than actually doing my revisions.
+
+Originally, I planned to follow the original creator's advice and create a new deck with higher quality audio, but I decided that that would take too much time, so I changed course.   
+
+'IPA Pair' field insertion script
+-----------
+
+I have written a script to generate the IPA pair that a card targets, and automatically insert it into the note in a new field. This way, you can simply filter manually for IPA pairs that you need/don't need, and process them as you like in Anki.
+
+### Instructions:
+
+Ensure you have the `anki` python package installed
+
+1. In Anki, edit the minimal pairs note types to add a field called `IPA Pair`
+2. If the name of the minimal pairs deck isn't `French Minimal Pairs`, edit `insert_ipa_pairs.py` to change the variable `MINIMAL_PAIRS_DECK_NAME` to your deck name.
+3. Locate your `collection.anki2` file and run the script like so: `python3 insert_ipa_pairs.py {PATH_TO_COLLECTION.ANKI2}`
+
 Inspiration
 -----------
 
